@@ -1,0 +1,9 @@
+SELECT b.nomor, b.kode, nama, b.jumlah, b.satuan, b.harga, b.discount, b.qty, 
+		jumlah * harga - discount as nilai, NO
+	FROM penjualan_item b
+	LEFT JOIN masterbarang a ON a.kode=b.kode
+	union
+		SELECT b.nomor, b.kode, nama, b.jumlah, b.satuan, b.harga, b.discount, b.qty, 
+		jumlah * harga - discount as nilai, NO
+	FROM penjualan_item_20241211 b
+	LEFT JOIN masterbarang a ON a.kode=b.kode 

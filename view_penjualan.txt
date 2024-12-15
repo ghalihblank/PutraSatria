@@ -1,0 +1,8 @@
+SELECT 
+	2 idx, nomor, tanggal, customer, total, potong
+	FROM penjualan 
+	UNION 
+	SELECT 
+	2 idx, nomor, tanggal, customer, total, potong
+	FROM penjualan_20241211 
+	WHERE tanggal > '2024-01-01' 
