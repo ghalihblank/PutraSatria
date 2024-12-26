@@ -1,0 +1,1 @@
+UPDATE masterbarang a SET a.nilai = (SELECT c.nilai FROM pembelian_item c WHERE c.kode=a.kode AND c.nilai <> null ORDER BY id DESC LIMIT 1) WHERE a.nilai <0;
